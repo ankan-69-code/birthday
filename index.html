@@ -5,13 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Happy Birthday Bhoothnath!</title>
     <style>
-        /* Fun Fonts */
         @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Open+Sans:wght@600&display=swap');
 
         body {
             margin: 0;
             padding: 0;
-            /* DARK GALAXY BACKGROUND */
             background: linear-gradient(-45deg, #0f0c29, #302b63, #24243e, #141E30);
             background-size: 400% 400%;
             animation: gradientBG 15s ease infinite;
@@ -23,7 +21,6 @@
             overflow: hidden;
         }
 
-        /* Dark Glass Card */
         .card-container {
             background: rgba(0, 0, 0, 0.6); 
             box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
@@ -191,29 +188,20 @@
 
         <div id="cover" class="stage active">
             <h1>HAPPYY BIRTHDAYY<br>BHOOTHNATH !!! 👻</h1>
-            
-            <p class="mama-note">
-                (Dakh tor mama kichu banieche tor jonno)
-            </p>
-            
-            <div class="gift-icon" onclick="startExperience()">
-                🎁
-            </div>
-            
+            <p class="mama-note">(Dakh tor mama kichu banieche tor jonno)</p>
+            <div class="gift-icon" onclick="startExperience()">🎁</div>
             <p style="font-weight:bold; color:#FFD700; margin-top:0;">(Click the gift to open!)</p>
-            
             <button class="btn" onclick="startExperience()">OPEN GIFT</button>
         </div>
 
         <div id="step1" class="stage">
             <h1>Phase 1: The Baby</h1>
             <div class="gallery">
-                <div class="photo-card"><img src="https://placehold.co/300x400/2c3e50/white?text=Baby+1" alt="Baby 1"></div>
-                <div class="photo-card"><img src="https://placehold.co/300x400/2c3e50/white?text=Baby+2" alt="Baby 2"></div>
-                <div class="photo-card"><img src="https://placehold.co/300x400/2c3e50/white?text=Baby+3" alt="Baby 3"></div>
+                <div class="photo-card"><img src="baby1.jpg" alt="Baby 1"></div>
+                <div class="photo-card"><img src="baby2.jpg" alt="Baby 2"></div>
+                <div class="photo-card"><img src="baby3.jpg" alt="Baby 3"></div>
             </div>
             <div class="speech-bubble">👶 BIRAT SHOITANI KORTIS</div>
-            
             <div class="btn-group">
                 <button class="btn-back" onclick="switchStep('step1', 'cover')">BACK</button>
                 <button class="btn" onclick="switchStep('step1', 'step2')">NEXT >></button>
@@ -223,12 +211,11 @@
         <div id="step2" class="stage">
             <h1>Phase 2: Growing Up</h1>
             <div class="gallery">
-                <div class="photo-card"><img src="https://placehold.co/300x400/2c3e50/white?text=Toddler+1" alt="Toddler 1"></div>
-                <div class="photo-card"><img src="https://placehold.co/300x400/2c3e50/white?text=Toddler+2" alt="Toddler 2"></div>
-                <div class="photo-card"><img src="https://placehold.co/300x400/2c3e50/white?text=Toddler+3" alt="Toddler 3"></div>
+                <div class="photo-card"><img src="toddler1.jpg" alt="Toddler 1"></div>
+                <div class="photo-card"><img src="toddler2.jpg" alt="Toddler 2"></div>
+                <div class="photo-card"><img src="toddler3.jpg" alt="Toddler 3"></div>
             </div>
             <div class="speech-bubble">😈 SHOITAN BORO HOYE ARO SHOITAN HOYEGECHLO</div>
-            
             <div class="btn-group">
                 <button class="btn-back" onclick="switchStep('step2', 'step1')">BACK</button>
                 <button class="btn" onclick="switchStep('step2', 'step3')">NEXT >></button>
@@ -238,15 +225,12 @@
         <div id="step3" class="stage">
             <h1>Phase 3: The Big Boy</h1>
             <div class="gallery">
-                <div class="photo-card"><img src="https://placehold.co/300x400/2c3e50/white?text=Now+1" alt="Now 1"></div>
-                <div class="photo-card"><img src="https://placehold.co/300x400/2c3e50/white?text=Now+2" alt="Now 2"></div>
-                <div class="photo-card"><img src="https://placehold.co/300x400/2c3e50/white?text=Now+3" alt="Now 3"></div>
+                <div class="photo-card"><img src="now1.jpg" alt="Now 1"></div>
+                <div class="photo-card"><img src="now2.jpg" alt="Now 2"></div>
+                <div class="photo-card"><img src="now3.jpg" alt="Now 3"></div>
             </div>
-            
-            <div class="speech-bubble">🐒 MAMA KE DEKHLEI EI BANDOR TAR ENGINE CHALU HOYE JAYE</div>
-            
+            <div class="speech-bubble">🐒 Mama ke dekhlei ei bandor tar engine chalu hoye jaye</div>
             <h2>Love You! ❤️</h2>
-
             <div class="btn-group">
                 <button class="btn-back" onclick="switchStep('step3', 'step2')">BACK</button>
                 <button class="btn" onclick="switchStep('step3', 'cover')">RESTART ↻</button>
@@ -258,9 +242,7 @@
     <script>
         function startExperience() {
             var music = document.getElementById("birthdayAudio");
-            music.play().catch(error => {
-                console.log("Audio autoplay failed - user interaction needed");
-            });
+            music.play().catch(error => { console.log("Audio autoplay failed"); });
             switchStep('cover', 'step1');
         }
 
